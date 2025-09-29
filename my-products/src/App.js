@@ -3,36 +3,40 @@ import { Card } from "react-bootstrap";
 import Name from "./Name";
 import Price from "./Price";
 import Description from "./Description";
-import Image from "./images";
+import Image from "./Image";
 
 function App() {
-  const firstName = "Hello There"; 
+  const firstName = "Hellen"; 
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
       <Card style={{ width: "22rem", padding: "10px" }}>
-        <Image />
-        <Card.Body>
+        <div style={{ position: "relative" }}>
+          <Image />
+          <div 
+            style={{
+              position: "absolute",
+              top: "10px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "rgba(255,255,255,0.7)",
+              padding: "5px 10px",
+              borderRadius: "8px",
+              fontWeight: "bold"
+            }}
+          >
+            {firstName ? `Hello, ${firstName}!` : "Hello, there!"} 😊
+          </div>
+        </div>
+
+        <Card.Body className="text-center">
           <Name />
           <Price />
           <Description />
         </Card.Body>
       </Card>
-
-      <div className="text-center mt-3">
-        <h3>
-          {firstName ? `Hello, ${firstName}!` : "Hello, there!"}
-        </h3>
-        {firstName && (
-          <img
-            src="https://via.placeholder.com/100.png?text=😊"
-            alt="greeting"
-            style={{ marginTop: "10px" }}
-          />
-        )}
-      </div>
     </div>
   );
 }
 
-export default App;
+export default App;   
