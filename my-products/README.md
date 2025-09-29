@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 🛍️ My Products
 
 A simple React product card application built with React and React-Bootstrap.
@@ -13,3 +14,6 @@ Greeting message (Hello, <your name>!)
 Responsive card layout using React-Bootstrap
 
 Beginner-friendly project structure
+=======
+
+>>>>>>> 2e07afd2167c0e7d0343ddb2f733f88bb0ce2de3
